@@ -1,8 +1,39 @@
-var iceCreamFlavours = ["chocolate", "vanilla", "cookies and cream", "rocky road", "strawberry"];
-console.log(iceCreamFlavours);
+function calculateRectangleArea(length, width, answer) {
+  answer = length * width;
+  if(length < 0 || width < 0) {
+    return undefined;
+  } else {
+    return answer;
+  }
+}
 
-iceCreamFlavours.push("root beer");
-console.log(iceCreamFlavours);
-console.log(iceCreamFlavours[0]);
-console.log(iceCreamFlavours[5]);
-console.log(iceCreamFlavours.length);
+function calculateTriangleArea(base, height, answer) {
+  answer = (base * height) / 2;
+  if(base < 0 || height < 0) {
+    return undefined;
+  } else {
+    return answer;
+  }
+}
+
+function calculateCircleArea(radius, answer) {
+  answer = (Math.PI) * (Math.pow(radius, 2));
+  if(radius < 0 ){
+    return undefined;
+  } else {
+    return answer;
+  }
+}
+
+
+console.log(calculateRectangleArea(10, 5));     // should print 50
+console.log(calculateRectangleArea(1.5, 2.5));  // should print 3.75
+console.log(calculateRectangleArea(10, -5));    // should print undefined
+
+console.log(calculateTriangleArea(10, 5)); // should print 25
+console.log(calculateTriangleArea(3, 2.5)); // should print 3.75
+console.log(calculateTriangleArea(10, -5)); // should print undefined
+
+console.log(calculateCircleArea(10)); // should print 314.159...
+console.log(calculateCircleArea(3.5)); // should print 38.484...
+console.log(calculateCircleArea(-1)); // should print undefined
