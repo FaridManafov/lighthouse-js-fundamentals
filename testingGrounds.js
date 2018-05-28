@@ -1,39 +1,6 @@
-function calculateRectangleArea(length, width, answer) {
-  answer = length * width;
-  if(length < 0 || width < 0) {
-    return undefined;
-  } else {
-    return answer;
+function concat(array1, array2) {
+  for (var i = 0; i < array2.length; i++) {
+    array1.push(array2[i]);
   }
+  return array1;
 }
-
-function calculateTriangleArea(base, height, answer) {
-  answer = (base * height) / 2;
-  if(base < 0 || height < 0) {
-    return undefined;
-  } else {
-    return answer;
-  }
-}
-
-function calculateCircleArea(radius, answer) {
-  answer = (Math.PI) * (Math.pow(radius, 2));
-  if(radius < 0 ){
-    return undefined;
-  } else {
-    return answer;
-  }
-}
-
-
-console.log(calculateRectangleArea(10, 5));     // should print 50
-console.log(calculateRectangleArea(1.5, 2.5));  // should print 3.75
-console.log(calculateRectangleArea(10, -5));    // should print undefined
-
-console.log(calculateTriangleArea(10, 5)); // should print 25
-console.log(calculateTriangleArea(3, 2.5)); // should print 3.75
-console.log(calculateTriangleArea(10, -5)); // should print undefined
-
-console.log(calculateCircleArea(10)); // should print 314.159...
-console.log(calculateCircleArea(3.5)); // should print 38.484...
-console.log(calculateCircleArea(-1)); // should print undefined
